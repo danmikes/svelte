@@ -1,5 +1,15 @@
 node_modules
 
+# Database
+pocketbase
+.pb_data/
+*.db
+*.db_journal
+
+# Env
+.env
+!.env.blank
+
 # Output
 .output
 .vercel
@@ -10,10 +20,6 @@ node_modules
 
 # System
 .DS_Store
-
-# Env
-.env
-!.env.blank
 
 # Vite
 vite.config.js.timestamp-*
