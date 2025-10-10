@@ -1,0 +1,11 @@
+# build
+/dist/
+/node_modules/
+vite.config.js.timestamp-*
+
+# develop
+.vscode/
+
+# system
+.DS_Store
+*.log
