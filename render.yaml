@@ -7,7 +7,7 @@ services:
       - key: PORT
         value: 8090
       - key: PB_ENCRYPTION_KEY
-        generateValue: true
+    healthCheckPath: /api/health
     disk:
       name: pb_data
       mountPath: /app/pb_data

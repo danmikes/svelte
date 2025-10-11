@@ -8,7 +8,7 @@
 ## Database
 - [dashboard](https://dashboard.render.com)
 - [local](http://localhost:8090/_)
-- [remote](https://svelte-pb.onrender.com/_)
+- [remote](https://svelte-qa2r.onrender.com/_)
 
 ## Install
 - `npm install`
