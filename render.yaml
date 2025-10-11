@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: svelte-pb
+    name: svelte-dmikes
     env: docker
     plan: free
     envVars:
