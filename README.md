@@ -1,27 +1,22 @@
 # Svelte-app
-
 - Mikes Consult
 - Npm SvelteKit
 
-## GitHub
-- https://github.com/danmikes/svelte.git
+## Code
+- [github](https://github.com/danmikes/svelte.git)
 
-## Configuration
+## Database
+- [dashboard](https://dashboard.render.com)
+- [local](http://localhost:8090/_)
+- [remote](https://svelte-pb.onrender.com/_)
+
+## Install
 - `npm install`
-- `deploy.yml`
 
 ## Develop
 - `npm run dev`
-
-## Database
-- [localhost:8090](http://localhost:8090/_)
-- [render.com](https://svelte-pb.onrender.com)
-
-## View
-- [localhost:5173](http://localhost:5173)
-
-# Deploy
 - `git push`
 
-# Website
-- [danmikes.github.io/svelte](https://danmikes.github.io/svelte)
+## View
+- [local](http://localhost:5173)
+- [remote](https://danmikes.github.io/svelte)

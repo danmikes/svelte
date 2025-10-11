@@ -1,12 +1,15 @@
-from alpine:latest
+FROM alpine:latest
 
-run apk add --no-cache ca-certificates && update-ca-certificates
-workdir /app
+RUN apk add --no-cache ca-certificates unzip
 
-add https://github.com/pocketbase/pocketbase/releases/download/v0.22.17/pocketbase_0.22.17_linux_amd64.zip /app/pocketbase.zip
-run unzip pocketbase.zip && chmod +x /app/pocketbase && rm pocketbase.zip
+ARG PB_VERSION=0.22.17
+ADD https://github.com/pocketbase/pocketbase/releases/download/v${PB_VERSION}/pocketbase_${PB_VERSION}_linux_amd64.zip /tmp/pocketbase.zip
 
-run mkdir -p /pb_data
-expose 8090
+RUN unzip /tmp/pocketbase.zip -d /app/ && \
+  chmod +x /app/pocketbase && \
+  rm /tmp/pocketbase.zip && \
+  mkdir -p /pb_data
 
-cmd ["/app/pocketbase", "serve", "--http=0.0.0.0:8090", "--dir=/pb_data"]
+EXPOSE 8090
+
+CMD ["/app/pocketbase", "serve", "--http=0.0.0.0:8090", "--dir=/pb_data"]
